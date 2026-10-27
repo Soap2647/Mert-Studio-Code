@@ -1,49 +1,60 @@
-# Mert Studio Code (Web Edition)
+<div align="center">
 
-A web-based Turkish Code Editor built with React, Vite, and Electron. It features syntax highlighting, theme selection, and an intuitive graphical interface designed for the custom DORUK programming language.
+# ⌨️ Mert Studio Code · Web Edition
 
-## Features
-- **Web & Desktop:** Runs as a web application via Vite or as a desktop app via Electron.
-- **Custom Theming:** Easily switch between dark and light themes.
-- **DORUK Support:** Syntax highlighting and formatting tailored for Turkish keywords.
+**The first editor for the DORUK language, a Turkish-keyword code editor built with React and Electron**
 
-## Technologies Used
-- **React & Vite**
-- **Electron**
-- **TailwindCSS** (for styling)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwindcss&logoColor=white)
 
-## Setup and Execution
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
+[Features](#-features) · [Run it](#-run-it) · [Türkçe](#-türkçe) · [➡️ v2 (C++ engine + Qt IDE)](https://github.com/Soap2647/Mert-Studio-Code-v2)
+
+</div>
 
 ---
 
-# Mert Studio Code (Web Sürümü)
+This is version 1 of **Mert Studio Code**, a lightweight editor for **DORUK**, a programming language
+whose keywords are Turkish (`eğer`, `döngü`, `yazdır` …). It runs in the browser through Vite or as a
+desktop app through Electron.
 
-React, Vite ve Electron altyapısı ile oluşturulmuş Türkçe kod editörüdür. Özelleştirilmiş DORUK programlama dili için sözdizimi renklendirmesi (syntax highlighting), tema seçimi ve sezgisel bir arayüz barındırır.
+> [!TIP]
+> The language later got a full C++ implementation (lexer, parser, semantic analyzer, interpreter) and a
+> native Qt IDE. See **[Mert-Studio-Code-v2](https://github.com/Soap2647/Mert-Studio-Code-v2)**.
 
-## Özellikler
-- **Web ve Masaüstü:** Vite ile bir web uygulaması olarak veya Electron ile bir masaüstü uygulaması olarak çalışır.
-- **Özel Temalandırma:** Karanlık (dark) ve aydınlık (light) temalar arasında kolayca geçiş yapın.
-- **DORUK Dili Desteği:** Türkçe anahtar kelimelere özel olarak uyarlanmış sözdizimi renklendirmesi ve biçimlendirme.
+## ✨ Features
 
-## Kullanılan Teknolojiler
-- **React & Vite**
-- **Electron**
-- **TailwindCSS** (tasarım için)
+- **Turkish syntax highlighting** tuned for DORUK keywords.
+- **Themes**: switch between dark and light editor themes.
+- **Settings modal** for font and editor preferences.
+- **Web and desktop**: the same React code runs in a browser tab or as an Electron window.
 
-## Kurulum ve Çalıştırma
-1. Gerekli paketleri kurun:
-   ```bash
-   npm install
-   ```
-2. Geliştirme sunucusunu başlatın:
-   ```bash
-   npm run dev
-   ```
+## 🚀 Run it
+
+```bash
+npm install
+npm run dev            # web version on http://localhost:5173
+npm run electron:dev   # desktop app (Electron + Vite dev server)
+npm run electron:dist  # packaged desktop build
+```
+
+## 📁 Project structure
+
+```
+src/
+├── components/   TurkceKodEditoru (editor), ThemeSelector, SettingsModal, editorUtils
+├── App.jsx
+└── main.jsx
+electron/         main.cjs, preload.cjs
+```
+
+## 🇹🇷 Türkçe
+
+**Mert Studio Code**'un ilk sürümü: Türkçe anahtar kelimeli **DORUK** dili için React, Vite ve Electron ile
+yazılmış bir kod editörü. Sözdizimi renklendirme, tema seçimi ve ayarlar içerir. Hem tarayıcıda hem masaüstünde
+çalışır. Dilin C++ motoru ve Qt IDE'si için: [Mert-Studio-Code-v2](https://github.com/Soap2647/Mert-Studio-Code-v2).
+
+---
+
+<div align="center"><sub>Built by <a href="https://github.com/Soap2647">Mert Yasin Yılmaz</a></sub></div>
